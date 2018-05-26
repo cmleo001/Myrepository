@@ -1,0 +1,6 @@
+---- TC3CR Matches (5 in 3 files) ----
+EM78F668N.h (inc):static unsigned int  TC3CR              @0x4E:rpage 0;//Timer 3 control register
+EM78F668N.h (inc):/*TC3CR Bits*/                          
+Register.h (inc):#define  TC3CR              @0x4E:rpage 0;//Timer 3 control register
+Register.h (inc):/*TC3CR Bits*/                          
+Timer.c (src):	TC3CR = 0x08;	//Timer 3 Control Register->Timer/Counter 3 clock source select(4£gs)

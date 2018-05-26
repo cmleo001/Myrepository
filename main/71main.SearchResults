@@ -1,0 +1,10 @@
+---- bI2CSendBuffer Matches (13 in 3 files) ----
+I2c.c (src):BYTE bI2CSendBuffer[4];	// 1command+2data+1checksum
+I2c.c (src):	I2C_DATA_BUFFER=bI2CSendBuffer[bI2CSendCnt];
+I2c.c (src):		I2C_DATA_BUFFER=bI2CSendBuffer[bI2CSendCnt-1];
+I2c.c (src):			//bI2CSendBuffer[0]=bI2CCheckSum;//130326sh01
+I2c.h (src):extern BYTE bI2CSendBuffer[4];	// 1command+2data+1checksum
+Main.c (src):			bI2CSendBuffer[0]=bGetMixQueue();
+Main.c (src):			bI2CSendBuffer[1]=bGetMixQueue();
+Main.c (src):			bI2CSendBuffer[2]=bGetMixQueue();
+Main.c (src):			bI2CSendBuffer[3]=~(bI2CSendBuffer[0]+bI2CSendBuffer[1]+bI2CSendBuffer[2]);//bI2CSendBuffer[3] is the checksum
